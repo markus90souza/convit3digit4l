@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-4 max-w-7xl;
+  }
+
+  .app-button {
+    @apply justify-center items-center flex;
+    @apply px-9 h-9 rounded-md gap-2;
+    @apply text-sm font-semibold;
+  }
+
+  .app-button.red {
+    @apply bg-red-500 text-white;
+    @apply hover:bg-red-600;
+  }
+
+  .app-button.blue {
+    @apply bg-blue-500 text-white;
+    @apply hover:bg-blue-600;
+  }
+
+  .app-button.green {
+    @apply bg-green-500 text-white;
+    @apply hover:bg-green-600;
+  }
+}
